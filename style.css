@@ -37,6 +37,58 @@ body{
     border: 2px solid navy;
     border-radius: 12px;
     background-color: #dff3fa;
+    box-shadow: 0 4px 10px rgb(0 0 80 / 12%);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.page-section a{
+    display: inline-block;
+    transition: color 200ms ease, transform 200ms ease;
+}
+
+.page-section button{
+    transition: transform 200ms ease, filter 200ms ease;
+}
+
+.page-section img{
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.page-section a:focus-visible,
+.page-section button:focus-visible{
+    outline: 3px solid blueviolet;
+    outline-offset: 4px;
+}
+
+@media (hover: hover){
+    .page-section:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgb(0 0 80 / 20%);
+    }
+
+    .page-section a:hover{
+        color: blueviolet;
+        transform: translateY(-2px);
+    }
+
+    .page-section button:hover{
+        transform: translateY(-2px) scale(1.03);
+        filter: brightness(1.1);
+    }
+
+    .page-section img:hover{
+        transform: scale(1.04) rotate(-1deg);
+        box-shadow: 7px 8px 14px gray;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .page-section,
+    .page-section a,
+    .page-section button,
+    .page-section img{
+        transition: none;
+    }
 }
 
 .page-section h2,
