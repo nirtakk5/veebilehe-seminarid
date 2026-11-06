@@ -1,0 +1,110 @@
+h1{
+    font-size: xx-large;
+    color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    font-size: medium;
+    color: navy;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    padding: 16px;
+    background-color: lightblue;
+}
+
+.page-layout{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    min-height: calc(100vh - 32px);
+    margin: 0 auto;
+}
+
+.page-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 16px;
+    border: 2px solid navy;
+    border-radius: 12px;
+    background-color: #dff3fa;
+}
+
+.page-section h2,
+.page-section p{
+    margin: 8px 0;
+}
+
+.page-section ul{
+    list-style-position: inside;
+    margin: 8px 0;
+    padding: 0;
+    line-height: 1.35;
+}
+
+.page-section img{
+    width: min(100%, 240px);
+    max-height: 24vh;
+    object-fit: contain;
+    margin: 8px auto;
+}
+
+.page-section table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.page-section th,
+.page-section td{
+    padding: 5px;
+    overflow-wrap: anywhere;
+}
+
+.page-section button{
+    align-self: center;
+    max-width: 100%;
+}
+
+.page-section br{
+    display: none;
+}
+
+@media (max-width: 760px){
+    body{
+        padding: 12px;
+    }
+
+    .page-layout{
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .page-section img{
+        max-height: 220px;
+    }
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    box-shadow: 5px 5px 5px gray;
+}
+
+th{
+    font-size: large;
+    color: lightpink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
